@@ -385,7 +385,7 @@
 % not capitalized unless they are the first or last word of the title.
 % Linebreaks \\ can be used within to get better formatting as desired.
 % Do not put math or special symbols in the title.
-\title{WiFi, WiMAX y LiFi}
+\title{Wi-Fi, WiMAX y LiFi}
 %
 %
 % author names and IEEE memberships
@@ -551,6 +551,93 @@ Las..
 % Here we have the typical use of a "T" for an initial drop letter
 % and "HIS" in caps to complete the first word.
 \IEEEPARstart{L}{as} 
+
+
+\section{Wi-Fi}
+Wi-Fi, una abrevitura para \emph{wireless fidelity}, es el nombre que la \emph{Wi-Fi Alliance} ha acuñado para un estándar inalámbrico utilizado para comunicaciones inalámbricas. Los dispositivos Wi-Fi están certificados para trabajar de forma interoperable en algún ``sabor'' del protocolo 802.11, un estándar inalámbrico de rango/alcance medio. 802.11 funciona a velocidades casi comparables a las de las redes cableadas.
+
+A un dispositivo que trasmite WiFi se le conoce como un punto de acceso -\emph{access point (AP)}- o \emph{hotspot}. Entre la conexión a interet un el punto de acceso Wi-Fi, se necesita de hardware diseñado para conectarse con Internet y compartir la conectividad. Existen varias formas diferentes de hacer esto, que dependen de muchos factores, pero en general para la conexión a Internet vía Wi-Fi involucra cuatro cosas:
+\begin{enumerate}
+    \item El dispositivo Wi-Fi (un cliente)
+    \item Una unidad de trasmisión Wi-Fi (el punto de acceso)
+    \item Hardware de conexión con la red (como un \emph{router} o módem)
+    \item El conexión a Internet (usualmente vía cable o DSL)
+\end{enumerate}
+
+La figura \ref{fig:wifi-red-basica} muestra una configuración de red típica que permite a los usuario conectarse a Internet por medio de Wi-Fi.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm]{wifi-red-basica}
+    \caption{Tomado de \cite{davis}.}
+    \label{fig:wifi-red-basica}
+\end{figure}
+
+
+\subsection{Espectros inalámbricos}
+A diferencia de mucho otros estándares inalámbricos , 802.11 funciona en porciones ``libres'' del espectro de radio. Esto significa que (a diferencia de las comunicaciones telefónicas celulares) ninguna licencia se require para transmitir o comunicarse usando 802.11 (o Wi-Fi).
+
+Las porciones libres del espectro de rado usadas por 802.11 (y Wi-Fi) son la bandas de 2.4, 3.6, 5 y 60GHz. Teléfonos inalámbricos y otros electrodomésticos hacen uso de estos espectros libres. El estándar 802.11 y (Wi-Fi) incluye la capa física, en esta se utiliza una tecnología conocida como \emph{Direct Sequence Spread Spectrum} (DSSS) para prevenir colisiones y evitar interferencia entre los dispositivos que operan en el mismo espectro. La idea con eso es que una señal que viene de algún electrodoméstico no interfiera con la descarga de un \emph{e-mail} o viceversa. 
+
+Además de la capa física, cada dispositivo Wi-Fi 802.11 tiene una capa de control de acceso. La capa de control de acceso especifica cómo un dispositivo Wi-Fi, como una computadora portátil, se comunica con otro dispositivo Wi-Fi, como un punto de access inalámbrico. Para proporcionar seguridad, se le ha añadido al estándar el \emph{Wi-Fi Protected Access solution} (WPA). 
+
+En conjunto, la capa física y la capa de control de acceso, junto con extensiones dirigidas para implementar funcionalidades extra (como WPA para seguridad) han el estándar 802.11 Wi-Fi.
+
+\subsubsection{¿Por qué Wi-Fi es importante?}
+El estándar 802.11 es importante porque millones de personas alrededor del mundo están haciendo uso de él. Lo utilizan para conectarse sin cables a Internet cuando están de viaje o lejos de su casa u oficina. También se usa 8802.11 para crear redes inalámbricas en su casas y oficinas.
+
+Wi-Fi provee garantía de compatibilidad para los dispositivos 802.11. Cada dispositivo 802.11 puede ``hablar'' con cualquier otro dispositivo Wi-Fi -- y la \emph{Wi-Fi Alliance} certifica esto. La funcionalidad y la durabilidad de cada dispositivo con el logo Wi-Fi es probado y certificado en laboratorios independientes. De igual forma, la \emph{Wi-Fi Alliance} y las compañías que la conforman están comprometidas en un esfuerzo continuo para expandir los estándares inalámbricos, y hacer de la computación inalámbrica una experiencia más segura y agradable.
+
+\subsubsection{Los espectros libres}
+Cualquier señal que se envía sin cables se le llama transmisión de radio. Cada dispositivo que transmite una transmisión por radio lo hace a una frecuencia particular. Al conjunto total de frecuencias de radio se le conoce como espectro de radio. A las porciones contiguas del espectro de rado se le llaman bandas, como ``la banda FM''.
+
+Mil megahertz es igual a un gigahertz (GHz). Así que cuando se hace referencia a 2.4Ghz, se habla en realidad de 2 400 000 000 oscilaciones por segundo. 
+
+Solo hay algunas frecuencias en el espectro de radio que pueden ser utilizadas para trasmisiones. Esto inevitablemente lleva a potenciales conflictos acerca de su uso así como intento por dominar frecuencias particulares. Como respuesta parcial, los gobiernos han regulado el uso de la mayoría de estas frecuencias. Algunas frecuencias están reservadas para usos particulares como en defensa militar. Otras como las bandas AM y FM se ofrecen bajo licencia. Algunas áreas del espectro se han dejado de lado para usos que no requieren licencia. Estas áreas retiradas incluyen los espectros como los de 2.4Ghz y 5Ghz que son los que usa Wi-Fi. Los usos de algunas de las frecuencias del espectro de radio se muestran en la figura \ref{fig:espectro-radio}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm]{espectro-radio}
+    \caption{Tomado de \cite{davis}.}
+    \label{fig:espectro-radio}
+\end{figure}
+
+El hecho que frecuencias como 2.4Ghz y 5Ghz se hayan retirado para usos que no requieren de licenciamiento tiene una implicación muy importante: su uso es barato. Esto les brinda a estos espectros ``libres'' un ventaja competitiva injusta comparado con el uso de un espectro por el que hay que pagar. De igual forma existen restricciones legales de los que se pueda hacer y lo que no con los espectros libres.
+
+También, al ser libre, espectros como 2.4Ghz se ha llenado de toda clase de dispositivos de transmisión, desde hornos de microondas hasta teléfonos inalámbricos. Estos dispositvos puede interferir con la transmisión Wi-Fi y su recepción.
+
+\subsection{El estándar 802.11 y sus variantes}
+En general, el núclo del estándar 802.11 está dirigido a especificar una forma en que las computadoras puedan conectarse en red (formando redes de área local) usando los espectros libres de 2.4Ghz y 5Ghz. 
+
+Hoy en día cuando se menciona ``Wi-Fi'', probablemente signifique 802.11b, el cual es un subconjunto del estándar general 802.11. La mayoría de los dispositivos Wi-Fi que están en operación están usando 802.11b. Sin embargo, la tecnología se mueve rápidamente y otras variantes como 802.11g se están haciendo más populares.
+
+Algunas cosas importantes a saber de 802.11b:
+\begin{itemize}
+    \item El estándar 802.11b usa el espectro de 2.4Ghz.
+    \item El estándar 802.11b usa la tecnología de DSSS para minizar la interferencia con otros dispositivos que trasmiten en el espectro de 2.4Ghz.
+    \item El estándar 802.11 brinda una velocidad teórica de 11Mbps.
+\end{itemize}
+
+En comparación, la velocidad de 11Mbps se muestra como favorable con respecto a los 10Mbps de velocidad un una red Ethernet cableada convencional \textsc{10BASE-T}. Sin embargo, por una variedad de razones, las conexiones Wi-Fi raramente alcanzan su máximo teórico. Aún así, las conexiones Wi-Fi deberían ser suficientes para el uso diario cuando se comparten archivos o se navega por Internet. 
+
+\subsubsection{802.11a y 802.11g}
+802.11a y 802.11g son variantes del estándar 802.11 que pueden ser considerados como más ``inteligentes'' que 802.11b. El estándar 802.11a usa la banda de 5Ghz para transmissión lo cual minimiza la posibilidad de interferencia con todos los dispositivos que transmiten en 2.4GHz y promete una rendimiento de 24Mbps. 
+
+802.11g opera en la banda de 2.4GHz y cuanta con rendimiento tan rápido como 54Mbps.
+
+En otras palabras ambos, 802.11a y 802.11g ofrecen la promesa de ser considerablemente más rápidos que 802.11b. De hecho, 802.11g está empezando a reemplazar a 802.11b como el estándar para los nuevos equipos. Existen otros estándares como 802.11n, el cual se postula con un nuevo competidor para los anteriores. En \cite{wikipedia-80211} se mantiene una lista detallada de las variantes de 802.11 conocidas hasta la fecha. 
+
+
+\subsubsection{Velocidades de transmisión}
+En la figura \ref{fig:wifi-velocidades} se muestra una comparación de las velocidades de los estándares inalámbricos. 802.11b Wi-Fi es un poco más lento que una red cableada pero es más adecuada para pequeñas oficinas y casas.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=9cm]{wifi-velocidades}
+    \caption{Tomado de \cite{davis}.}
+    \label{fig:wifi-velocidades}
+\end{figure}
+
 
 
 % needed in second column of first page if using \IEEEpubid
@@ -729,8 +816,11 @@ Las..
 % (used to reserve space for the reference number labels box)
 \begin{thebibliography}{1}
 
-\bibitem{bombal}
-D.~Bombal. \emph{Software Defined Networking(SDN)}. \hskip 1em plus 0.5em minus 0.4em\relax Infinite Skills. ISBN: 9781491976593. Febrero, 2017.
+\bibitem{davis}
+H.~Davis. \emph{Absolute Beginner's Guide to Wi-Fi Wireless Networking}. \hskip 1em plus 0.5em minus 0.4em\relax Que. ISBN: 0789731150. Abril, 2004.
+
+\bibitem{wikipedia-80211}
+Wikipedia. IEEE 802.11. Disponible en \url{https://en.wikipedia.org/wiki/IEEE_802.11}
 
   
 \end{thebibliography}
