@@ -362,6 +362,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[spanish]{babel}
 \usepackage{graphicx}
+\usepackage{booktabs}
 \graphicspath{ {images/} }
 
 
@@ -638,6 +639,118 @@ En la figura \ref{fig:wifi-velocidades} se muestra una comparación de las veloc
     \label{fig:wifi-velocidades}
 \end{figure}
 
+\section{WiMAX}
+WiMAX es la abreviación para \emph{Worldwide Interoperability for Microwave Accesss} y fue introducido en el 2001. Su propósito era promover la conformidad e interoperatibilidad del estándar oficial IEEE 802.11 llamado \emph{``Wireless MAN''}. WiMAX está basado en el estándar IEEE 802.16 (tal y como se muestra en la figura \ref{fig:wimax-standards}) . Esta tecnología está principalmente asociada como una tecnología de conectividad de ``última milla'' (\emph{last mile})  de alta velocidad. Las tecnologías de banda ancha como Wi-Fi usan ADSL como su red apoyo (\emph{backbone}), sin embargo, WiMAX usa tecnología inalámbrica, haciéndola accesible incluso en áreas en donde no están conectadas por cable o fibra.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=9cm]{wimax-standards}
+    \caption{Algunos estándares 802.11 para WiMAX \cite{davis}.}
+    \label{fig:wimax-standards}
+\end{figure}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{l|l|l}
+        \toprule[1.5pt]
+         & \textbf{\emph{Fixed} WiMAX} & \textbf{\emph{Mobile} WiMAX}\\
+        \midrule
+        Tipo de Red & \emph{Fixed} & \emph{Fixed, Mobile} \\
+        Modulación & OFDM & OFDMA \\
+        Frecuencia & 2.5, 3.4-3.6, 5.8GHz & 2.3-2.4, 2.5-2.7,\\
+                   &                      &3.3-3.4, 3.4-3.8GHz\\
+        Duplex & TDD, FDD & TDD, FDD \\
+        \emph{Handoff} & No & Sí \\
+        Equipo & \emph{Outdoor/Indoor} CPE & CPE, módulos integrados \\
+        \bottomrule[1.5pt]
+    \end{tabular}
+    \caption{\emph{Fixed} vs \emph{Mobile} WiMAX}
+    \label{table:fixed-mobile}
+\end{table}
+
+Las principales ventajas de WiMAX sobre sobre sistemas son:
+\begin{itemize}
+    \item Mejor rendimiento del sistema gracias a mecanismos avanzados de QoS.
+    \item Mayor rendimiento debido a las robustas tecnologías de adaptación y eficiencia espectral (casi tres veces mejor que los actuales sistemas 3G).
+    \item Capacidad para rellenar los vacíos (debido a la conexión inalámbrica) en una región que tiene banda ancha debido a cable/DSL.
+    \item Interoperatibilidad
+    \item Tiene la habilidad de ``banda ancha bajo demanda'', con anchos de banda de hasta 100Mbps.
+    \item El diseño del sistem no necesita condiciones de ``línea de vista'' 
+\end{itemize}
+
+
+El rendimiento de los sistemas WiMAX se debe al uso de las tecnologías de interface aérea OFDM y OFDMA. La utilización de TDD (\emph{Time Division Duplex}) también mejora el rendimiento del sistema, aunque FDD (\emph{Frequency Division Duplex}) también se puede usar. Gracias a estas técnicas de multiplexación, altas tasas de datos puede ser ofrecidos a los subscriptores con una mayor eficiencia espectral. Debido a 802.16, la calidad del servicio es mayor en el sistema. Las características de MAC permiten una QoS basada en IP \emph{e2e}, ya que proporciona flexibilidad en la programación de los recursos a través de la interfaz aérea. La red WiMAX es más interoperable que el resto de las redes BWA (\emph{Broadband Wireless Access}). Las frecuencias se encuentran en en rangos que van desde 2.3GHz, 2.5GHz y 3.4-3.8GHz para bandas con licencia y 5.8GHz en bandas sin licencia. Aunque las bandas sin licencia parecen ser la mejor opción, existen problemas asociadas con las mismas, por ejemplo, interferencia: una gran cantidad de interferencia puede esperarse de otras tecnologías que puedan usar esta banda, por ejemplo \emph{Bluetooth} o Wi-Fi. Latencia, seguridad y regulaciones del espectro son también algunos de los problemas que se pueden presentar.
+
+Las características principales de los sistemas WiMAX son:
+\begin{itemize}
+    \item WiMAX es un sistema TDD.
+    \item Los requerimientos del espectro van desde 10MHz a 30MHz
+    \begin{itemize}
+        \item Banda de frecuencia: Licenciada 2.5/2.5 GHz; 3.5GHz
+        \item Banda de frecuencia: Sin licencia 5.8 GHz
+    \end{itemize}
+    \item Estimaciones de rendimiento:
+    \begin{itemize}
+        \item Teórico: 70Mbps (para una portadora de 20MHz)
+    \end{itemize}
+    \item Rango celular
+    \begin{itemize}
+        \item Para 2.5GHz, 500m - 1.5Km
+    \end{itemize}
+\end{itemize}
+
+\subsection{OFMDA: Modulación en WiMAX}
+\emph{Mobile} WiMAX adopta \emph{Orthogonal Frequency Division Multiple Access} (OFDMA) para un rendimiento \emph{multi-path} mejorado en ambientes ``fuera de la línea de vista''. OFDMA escalable fue introducido como una enmienda para soportar anchos de banda de canales escalables de 1.25 a 20 MHz. El grupo técnico móvil del WiMAX forum está desarrollando perfiles de sistemas WiMAX móviles que van a definirá las características obligatorias y opcionales de la norma IEEE. El perfil habilita que los sistemas móviles sean configurados basados en un conjunto de base de funcionalidad. 
+
+Esta es una técnica de multiplexación que subdivide el ancho de banda en múltiples frecuencias sub-portadoras. En este sistema, los flujos de datos de entrada se divide en varias sub-flujos paralelos de tasas de datos reducidos que son modulado y transmitidos en una sub-portadora ortogonal como se muestra en la figura \ref{fig:ofdma}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=9cm]{ofdma}
+    \caption{Arquitectura de OFDMA \cite{davis}.}
+    \label{fig:ofdma}
+\end{figure}
+
+\subsection{Arquitectura de WiMAX}
+Un diagrama de bloques simplificado de la red WiMAX se muestra en la figura \ref{fig:wimax-architecture}. La red WiMAX consiste de 3 principales aspectos:
+\begin{itemize}
+    \item Estación móvil / Equipo
+    \item Red de servicios de acceso (\emph{Access Services Network} - ASN)
+    \item Red de servicios de conectividad (\emph{Connectivity Services Network} - CSN)
+\end{itemize}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=9cm]{wimax-architecture}
+    \caption{Arquitectura de OFDMA \cite{davis}.}
+    \label{fig:wimax-architecture}
+\end{figure}
+
+\subsubsection{Estación Móvil}
+La estación móvil como en otras red conecta al usuario a la estación base o al acceso a la red. La principal diferencia con dispositivos GSM o CDMA es que estos necesitan ser compatibles con IEEE 802.16. También, el dispositivo móvil debe tener funcionalidades como gestión de recursos, gestión móvil, capacidad de ahorro de energía, autorización, autenticación y gestión de sesiones.
+
+\subsubsection{Red de servicios de acceso}
+La red de servicios de acceso conecta el subscriptor móvil al IP \emph{backbone} usando la interface aérea OFDMA. Consiste principalmente de dos partes: la estación base y el ASN \emph{Gateway}. Un ASN puede consistir de uno o mas estaciones base y uno o más ASN \emph{gateways}.
+
+\paragraph{Estación base} un diagrama simplificado de la estación base se muestra en la figura \ref{fig:base-station}. Tiene un módulo de radio frecuencia y un módulo de sistema. En práctica, hay más de un módulo de radio frecuencia en las estaciones base. Ambos módulos están conectados a un cable óptico \emph{Open Base Station Architecture Initiative}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=9cm]{base-station}
+    \caption{Estación base WiMAX \cite{davis}.}
+    \label{fig:base-station}
+\end{figure}
+
+Como el nombre lo indica, las funciones de radio frecuencia son realizads por el módulo de radio frecuencia. El módulo de radio frecuencia tiene interfaces hacia el módulo del sistema, energía y sistema de antena. El módulo del sistema es responsable por el control de la estación base y realiza funciones relacionadas a la capa física (transmisión y recepción de símbolos ODFM, control de energía, etc) y la capa MAC (configuración de conectividad, \emph{scheduling}, movilidad, etc).
+
+\paragraph{ASN Gateway} como se muestra en la figura \ref{fig:wimax-architecture} es una interface entre ASN y CSN. El ASN \emph{gateway} es una entidad lógica que es responsable de funciones como gestión móvil, por ejemplo, paginación (\emph{paging}), QoS, interfaz de interceptación legal, autenticador, gestión de flujos de datos, etc. La ASN \emph{gateway} realiza principalmente una o muchas de las tareas de plano de control, plano de usuario y \emph{gateway} de servicio y destino.
+
+\paragraph{Red de servicios de conectividad (CSN)} realiza algunas funciones clave en una red WiMAX. Como el nombre lo sugiere, provee conectividad para las redes externas como Internet, PLMN y otras. También proporciona políticas de contro para voz y VPN. Es también responsable de gestión de direcciones IP (DHCP, AAA, etc) y localización, además de gestión de movilidad entre los ASNs. El CSN es también responsable de la gestión de QoS. El CSN contiene dos elementos principales:
+\begin{itemize}
+    \item Servidor de autenticación, autorización y bitácora (\emph{Authentication, Authorization and Accounting} - AAA).
+    \item Agente Doméstico (\emph{Home Agent} - HA)
+\end{itemize}
 
 
 % needed in second column of first page if using \IEEEpubid
