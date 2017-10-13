@@ -485,7 +485,7 @@
 % in the abstract or keywords.
 \IEEEtitleabstractindextext{%
 \begin{abstract}
-Las..
+Este paper pretende explicar las diferencias entre las tecnologías WiFi,WIMAX y LiFi las cuales tienen la particularidad de ser tecnologías aplicadas a redes inalámbricas.
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
@@ -551,7 +551,7 @@ Las..
 % 
 % Here we have the typical use of a "T" for an initial drop letter
 % and "HIS" in caps to complete the first word.
-\IEEEPARstart{L}{as} 
+\IEEEPARstart{L}{a} demanda de comunicaciones se ha vuelto insuficiente muchas veces. Con el paso del tiempo se ha vuelto necesaria la creación de nuevas tecnologías que mejoren los tiempos de transmisión de datos a través de la red y que sean fáciles de implementar y usar al mismo tiempo en tiempos donde el IoT se convierte en un tema importante donde el acceso a internet es popular y son mas los dispositivos móviles con acceso a la red que se crean. Es necesario tener tecnologías capaces de cumplir con la demanda actual que hay en la red como lo son WiFi, WIMAX y LiFi.
 
 
 \section{Wi-Fi}
@@ -772,12 +772,7 @@ La visión que se tiene es que una red inalámbrica Li-Fi complemente las redes 
 
 \subsection{Como funciona Li-Fi}
 
-Se utiliza luz led para poder transmitir señales inalámbricas que llevan los datos donde se codifica la información basada en las frecuencias de la luz LED, la velocidad de la transmisión tiene una relación directa con los colores de las luces pues, si esta mas lejano al blanco mas rápida sera la transmisión pues hay un mayor espectro de frecuencia para ser utilizado. Para poder transmitir información hacia la internet es necesario conectar la bombilla LED con LiFi a un router conectado a la red donde, el transmisor de LiFi esta listo para enviar información, se necesita tener un receptor con LiFi instalado de forma tal que el ciclo de transmisión se logre cerrar. 
-
-http://profesores.elo.utfsm.cl/~agv/elo322/1s13/project/reports/Desafios_de_las_nuevas_tecnologias.pdf
-
-http://karafarinbash.com/wp-content/uploads/2016/05/Principles-of-LED-Light-Communications-Towards-Networked-Li-Fi-Svilen-Dimitrov-Harald-Haas-2015.pdf 
-\subsection{Ventajas y desventajas de LiFi}
+Se utiliza luz led para poder transmitir señales inalámbricas que llevan los datos donde se codifica la información basada en las frecuencias de la luz LED, la velocidad de la transmisión tiene una relación directa con los colores de las luces pues, si esta mas lejano al blanco mas rápida sera la transmisión pues hay un mayor espectro de frecuencia para ser utilizado. Para poder transmitir información hacia la internet es necesario conectar la bombilla LED con LiFi a un enrrutador conectado a la red donde, el transmisor de LiFi esta listo para enviar información, se necesita tener un receptor con LiFi instalado de forma tal que el ciclo de transmisión se logre cerrar. 
 
 \begin{figure}[h]
     \centering
@@ -785,6 +780,28 @@ http://karafarinbash.com/wp-content/uploads/2016/05/Principles-of-LED-Light-Comm
     \caption{Funcionamiento de LiFi \cite{aravena}.}
     \label{fig:base-station}
 \end{figure}
+
+
+Lifi a diferencia de WiFi hace uso de una menor cantidad de dispositivos, razón por la cual su instalación es mas sencilla y eficiente. Utiliza lamparas de LED donde el cambio de luz no es casi visible para el ser humano donde las ondas de luz son las que se usan para transmitir los datos, del lado de la bombilla es necesario instalar un modulador encargado de variar la onda de la señal para que la misma sea enviada. Como elemento de recepción se usan foto-receptores que son capaces de captar la variación de la intensidad de la luz y convertirlos en corriente eléctrica. En la figura 9 se puede ver de forma general los bloques que componen a el transmisor y el receptor donde el canal óptico de transmisión es mostrado, incluyendo diferentes rayos de luz y los objetos reflectados.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=9cm]{lifi2}
+    \caption{OWC vinculo de transmisión. \cite{dimitroy}.}
+    \label{fig:base-station}
+\end{figure}
+
+Algunas normas para la tecnología LiFi son muy similares a la WiFi por ejemplo, LiFi usa protocolos parecidos a IEEE802.11 con la diferencia que la comunicación la entabla por medio de la luz visible y que además tiene un ancho de banda mucho mayor que el WiFi que hace uso de ondas de radiofrecuencia.
+
+El protocolo de comunicación de luz visible establecido por la IEEE802 define la capa física y la capa de control de acceso donde es capaz de ofrecer la velocidad necesaria para la transición de servicios de audio y vídeo tomando en cuenta variables como la transmisión óptica, la interrupción de otras luces artificiales y la  luz ambiente. 
+
+
+\subsection{Ventajas y desventajas de LiFi}
+
+La ventaja del uso de LiFi es que esta tecnología puede ser utilizada en diferentes ambientes como aviones pues no interfiere con señales durante el vuelo. Puede ser mas barato que WiFi al implementar pocos elementos, es demasiado rápido al transmitir datos, no requiere la autentificaron de usuario pues la transmisión se hace de forma directa. Mientras que se alumbra con la bombilla se recibe internet de forma tal que con la misma energía y el mismo producto se hacen dos cosas distintas al mismo tiempo.
+
+La mayor desventaja es el reducido alcance a diferencia de WiFi además, es una tecnología reciente que necesita ser madurada, en el mercado no existen bombillas que sean receptoras de LiFi y no trabaja bien con interferencia de luz solar, solamente con la generada por la bombilla.
+
 % needed in second column of first page if using \IEEEpubid
 %\IEEEpubidadjcol
 
@@ -889,7 +906,7 @@ http://karafarinbash.com/wp-content/uploads/2016/05/Principles-of-LED-Light-Comm
 
 \section{Conclusión}
 
-
+Las interconexiones requieren protocolos que sean cada vez mas comunes donde es necesario el desarrollo de nuevas tecnologías que permitan el avance de las redes y las telecomunicaciones. Los desarrolladores de software y hardware necesitan asegurar que sus productos sean compatibles entre si y que existan mecanismos de comunicación eficientes para soportar la demanda de datos. Tecnologías como LiFi, WiFi y WIMAX permiten que el desarrollo de las telecomunicaciones aumente y que el acceso a la red sea mucho mas facil.
 
 
 
