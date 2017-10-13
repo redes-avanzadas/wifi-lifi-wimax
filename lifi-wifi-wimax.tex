@@ -752,7 +752,39 @@ Como el nombre lo indica, las funciones de radio frecuencia son realizads por el
     \item Agente Doméstico (\emph{Home Agent} - HA)
 \end{itemize}
 
+\section{LiFi}
 
+Las comunicaciones ópticas son aquellas que usan la luz como el medio de transmisión. La comunicación inalámbrica óptica ha evolucionado como una tecnología complementaria a la radio frecuencia [4] donde se utilizan las ondas en el espectro infrarrojo para la comunicación IP y la luz visible del espectro para comunicación por luz visible(VCL por sus siglas en inglés.) Dada a la habilidad de lo amplio del espectro aproximadamente unos 670 THz[4] la comunicación inalámbrica óptica tiene el potencial de proveer enlaces inalámbricos con mejores tiempos de transmisión. 
+
+Li-Fi también es visto como un sistema digital que traduce el lenguaje mediante pulsos de luz que logran encender y apagar bombillas de LED. Mediante ese parpadeo se pueden crear redes inalámbricas que permitan el acceso a la red en 500Mbs por segundo[4], multiplicando la cantidad de trafico que permiten las fibras ópticas. 
+
+EL concepto busca transmitir datos mediante luz en vez de radiofrecuencias donde los LEDs de cada bombilla se enciendan y se apaguen tan rapido que no puede ser vista por el ojo humano, razon por la cual no generaria un danno a la vista.
+
+\subsection{Historia de la comunicación inalámbrica óptica(OWC)}
+
+Las lineas de semáforo son unas de las invenciones mas antiguas relacionadas con la comunicación inalámbrica óptica donde el ingeniero francés Claude Chappe construye la primera telegrafía óptica en 1792[4] donde, las torres de semáforos permitían la transmisión de 196 símbolos de información codificados en la posición de dos brazos conectados por una barra transversal. También se tiene el primer telégrafo solar sin hilos que señalaba destellos de luz solar girando un espejo o interrumpiendo el haz con un obturador. También en tiempos de guerra, después de la invención del código Morse en 1836 los buques de la Armada se comunicaban a través de una lampara de señal con los faro en tierra apara poder navegar. Para 1880 de la mano de Alexander Graham Bell se logra demostrar la primera implementación de un enlace óptico de espacio libre en la forma de un fotón[4]. Bell fue capaz de modular mensajes de voz sobre una señal luminosa. 
+Los mas recientes avances en la tecnología de OWC ganaron fuerza después de la demostración de  Gfeller y Bapst en 1973[4]. Ellos pudieron mostrar el potencial del OWC para las redes internas de alta capacidad que prometían anchos de banda dentro del espectro óptico para una señal de voz sobre una señal luminosa. 
+Otra rama de OWC se centra en las redes inalámbricas móviles de interior donde se usaban LEDs como transmisores dando origen a una rama emergente dentro del campo de la OWC llamada Li-Fi (Ligth Fidelity) de la mano de Harald Haass en 2011[4].
+
+Hasta la fecha, la investigación en el campo de OWC se ha centrado en implementaciones exitosas de las conexiones de enlace físico y pruebas de concepto. Sin embargo, para la realización de un sistema de comunicación móvil, se requiere una solución de red completa. Esto es lo que se conoce como Li-Fi: la red, móvil, de alta velocidad que forma parte de una rama dentro de las  soluciones OWC.
+
+La visión que se tiene es que una red inalámbrica Li-Fi complemente las redes inalámbricas RF heterogéneas existentes, permitiendo que los sistemas de fidelidad celular e inalámbrica (Wi-Fi) descarguen con  una parte significativa del tráfico de datos inalámbricos.
+
+\subsection{Como funciona Li-Fi}
+
+Se utiliza luz led para poder transmitir señales inalámbricas que llevan los datos donde se codifica la información basada en las frecuencias de la luz LED, la velocidad de la transmisión tiene una relación directa con los colores de las luces pues, si esta mas lejano al blanco mas rápida sera la transmisión pues hay un mayor espectro de frecuencia para ser utilizado. Para poder transmitir información hacia la internet es necesario conectar la bombilla LED con LiFi a un router conectado a la red donde, el transmisor de LiFi esta listo para enviar información, se necesita tener un receptor con LiFi instalado de forma tal que el ciclo de transmisión se logre cerrar. 
+
+http://profesores.elo.utfsm.cl/~agv/elo322/1s13/project/reports/Desafios_de_las_nuevas_tecnologias.pdf
+
+http://karafarinbash.com/wp-content/uploads/2016/05/Principles-of-LED-Light-Communications-Towards-Networked-Li-Fi-Svilen-Dimitrov-Harald-Haas-2015.pdf 
+\subsection{Ventajas y desventajas de LiFi}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=9cm]{lifi1}
+    \caption{Funcionamiento de LiFi \cite{aravena}.}
+    \label{fig:base-station}
+\end{figure}
 % needed in second column of first page if using \IEEEpubid
 %\IEEEpubidadjcol
 
@@ -938,7 +970,12 @@ A.R.~Mishra. \emph{Cellular Technologies for Emerging Markets: 2G, 3G and Beyond
 \bibitem{wikipedia-80211}
 Wikipedia. IEEE 802.11. Disponible en \url{https://en.wikipedia.org/wiki/IEEE_802.11}
 
-  
+\bibitem{dimitroy}
+S.~Dimitrov,H.~Haas . \emph{Principles of LED Light Communications towards networked Li-Fi}. \hskip 1em plus 0.5em minus 0.4em\relax Cambridge University. June 2015.
+
+
+\bibitem{aravena}
+E.~Aravena . \emph{Desafios de las nuevas tecnologías: un análisis a LiFi y otras tecnologías}. \hskip 1em plus 0.5em minus 0.4em\relax Universidad Técnica Federico Santa María. Septiembre 2013.
 \end{thebibliography}
 
 % biography section
